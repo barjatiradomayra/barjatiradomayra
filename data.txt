@@ -1,0 +1,17 @@
+<select class="form-control col-sm-6" onchange="mostrarGrafico(this.value);" name="area" id="selectArea">
+                <?php                            
+                    foreach($data as $dat) {                                                        
+                    ?>
+                    <option value="<?php echo $dat['id_area']; ?>"><?php echo $dat['nombre_area'];  ?></option>
+                    <?php
+                        }
+                    ?>   
+                </select>
+
+
+
+
+                ALTER TABLE `advertisers`
+ADD CONSTRAINT `advertisers_ibfk_1`
+FOREIGN KEY (`advertiser_id`) REFERENCES `jobs` (`advertiser_id`)
+ON DELETE CASCADE;
